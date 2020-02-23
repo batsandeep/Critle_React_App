@@ -11,7 +11,7 @@ const Bounce = styled.div`
   animation: 2s ${keyframes`${bounce}`} infinite;
 `;
 
-function App() {
+function WelcomePage() {
   var navImg = {
     width: "25px"
   };
@@ -41,6 +41,9 @@ function App() {
     marginTop: "20px",
     fontSize: "14px"
   };
+
+
+
 
   return (
     <div>
@@ -125,4 +128,4 @@ function App() {
   );
 }
 
-export default App;
+export default WelcomePage;

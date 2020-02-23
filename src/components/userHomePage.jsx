@@ -66,22 +66,6 @@ function UserHomePage() {
     color: "#61071f"
   };
 
-  var scraper = require("artproject-scraper");
-
-  scraper(function(err, randomArt) {
-    if (!err) console.log(randomArt);
-
-    // Output:
-    //
-    // {
-    //   image: 'http://lh4.ggpht.com/cLJpANVeHxbEdjmRMUu7E0YBYdbGoRVd87igKPdXbgvKt69qWoWg_7-6GE9U=s1200',
-    //   title: 'Portrait of Nini Lopez',
-    //   link: 'https://www.google.com/culturalinstitute/browse/Portrait%20of%20Nini%20Lopez',
-    //   description: 'Nini Lopez first appeared in the work of Auguste Renoir (1841–1919) in La Loge (The Theatre Box), painted in 1874. The young woman from Montmartre, cruelly nicknamed Nini-Gueule-de-Raie, or "fish face", is shown alongside the artist\'s brother. Although the artwork was immediately purchased by the art dealer "le Père Martin", Renoir, like many of his Impressionist friends, was experiencing serious financial difficulty at the time. In the spring of',
-    //   creator: 'Pierre-Auguste Renoir',
-    //   date: '1876'
-    // }
-  });
 
 
   const scaryAnimals = [
@@ -113,7 +97,7 @@ function UserHomePage() {
       <Navbar bg="light" expand="lg" sticky="top">
         <Navbar.Brand href="#home">
           <img
-            src={require("./newLogo.png")}
+            src={require("./assets/newLogo.png")}
             alt="critle-logo"
             style={navImg}
           ></img>
@@ -137,7 +121,7 @@ function UserHomePage() {
                 aria-expanded="false"
               >
                 <img
-                  src={require("./dummyProfilePic.jpg")}
+                  src={require("./assets/dummyProfilePic.jpg")}
                   alt="profile_pic"
                   width="30"
                   height="30"
@@ -269,7 +253,7 @@ function UserHomePage() {
         <Row className="justify-content-md-center" style={smallGap}>
           <Col xs lg="2"></Col>
           <Col md="auto">
-            <DisplayResults />
+            {/* <DisplayResults /> */}
           </Col>
           <Col xs lg="2"></Col>
         </Row>

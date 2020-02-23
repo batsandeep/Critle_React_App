@@ -7,17 +7,22 @@ import Card from "react-bootstrap/Card";
 import Button1 from "react-bootstrap/Button";
 import ButtonPop from "./ButtonPop";
 import ButtonPopEdit from "./ButtonPopEdit";
+import ButtonPopNew from "./ButtonPopNew";
+// import { FloatingAction } from "react-native-floating-action";
+
 
 
 
 function Artists() {
+
+  
 
   var navImg = {
     width: "25px",
     marginLeft: "5px"
   };
   var navBrand = {
-    fontSize: "25px",
+    fontSize: "25px", 
     position: "static",
     top: "5px"
   };
@@ -68,7 +73,7 @@ var hugeGap = {
       <Navbar bg="light" expand="lg" sticky="top">
         <Navbar.Brand href="#home">
           <img
-            src={require("./newLogo.png")}
+            src={require("./assets/newLogo.png")}
             alt="critle-logo"
             style={navImg}
           ></img>
@@ -83,9 +88,16 @@ var hugeGap = {
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 <img
-                  src={require("./dummyProfilePic.jpg")}
+                  src={require("./assets/dummyProfilePic.jpg")}
                   alt="profile_pic"
                   width="30"
                   height="30"
@@ -136,21 +148,11 @@ var hugeGap = {
           <Col xs={6} md={4}>
             <center>
               <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                  <Card.Title>Image1</Card.Title>
-                  <Card.Text>
-                    This is the image 1 with this short description
-                  </Card.Text>
-                  <ButtonPop />
-                </Card.Body>
-              </Card>
-            </center>
-          </Col>
-          <Col xs={6} md={4}>
-            <center>
-              <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={require("./dummyProfilePic.jpg")}  style={imgView}/>
+                <Card.Img
+                  variant="top"
+                  src={require("./assets/dummyProfilePic.jpg")}
+                  style={imgView}
+                />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
@@ -167,22 +169,65 @@ var hugeGap = {
           <Col xs={6} md={4}>
             <center>
               <Card style={{ width: "18rem" }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img
+                  variant="top"
+                  src={require("./assets/dummyProfilePic.jpg")}
+                  style={imgView}
+                />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
                     Some quick example text to build on the card title and make
                     up the bulk of the card's content.
                   </Card.Text>
+                  <ButtonPopEdit />
+                  <span style={buttRight}></span>
+                  <ButtonPop />
+                </Card.Body>
+              </Card>
+            </center>
+          </Col>
+          <Col xs={6} md={4}>
+            <center>
+              <Card style={{ width: "18rem" }}>
+                <Card.Img
+                  variant="top"
+                  src={require("./assets/dummyProfilePic.jpg")}
+                  style={imgView}
+                />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </Card.Text>
+                  <ButtonPopEdit />
+                  <span style={buttRight}></span>
                   <ButtonPop />
                 </Card.Body>
               </Card>
             </center>
           </Col>
         </Row>
+
+        <Row className="justify-content-md-center" style={hugeGap}>
+          <Col xs lg="2"></Col>
+          <Col md="auto">
+            <ButtonPopNew>Upload</ButtonPopNew>
+          </Col>
+          <Col xs lg="2"></Col>
+        </Row>
       </div>
 
-    
+      {/* <View style={styles.container}>
+  <Text style={styles.example}>Floating Action example</Text>
+  <FloatingAction
+    actions={actions}
+    onPressItem={name => {
+      console.log(`selected button: ${name}`);
+    }}
+  />
+</View> */}
     </div>
   );
 }

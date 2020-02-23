@@ -50,7 +50,7 @@ function WelcomePage() {
       <Navbar bg="light" expand="lg" sticky="top">
         <Navbar.Brand href="#home">
           <img
-            src={require("./newLogo.png")}
+            src={require("./assets/newLogo.png")}
             alt="critle-logo"
             style={navImg}
           ></img>
@@ -63,8 +63,7 @@ function WelcomePage() {
             <Nav></Nav>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">About</Nav.Link>
-            <Nav.Link href="#memes">Sign In</Nav.Link>
+            {/* <Nav.Link href="#memes">Sign In</Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -74,7 +73,7 @@ function WelcomePage() {
           <Col xs lg="2"></Col>
           <Col md="auto">
             <img
-              src={require("./newLogo.png")}
+              src={require("./assets/newLogo.png")}
               alt="critle-logo"
               style={mainImg}
             ></img>

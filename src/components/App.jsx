@@ -6,12 +6,13 @@ import Artists from "./artists";
 
 var isUserLoggedIn = true;
 
+
 function App() {
 
   return <div>
-  <UserHomePage />
+
   {/* <Artists /> */}
-    {/* {isUserLoggedIn ? <UserHomePage /> : <WelcomePage />} */}
+    {isUserLoggedIn ? <UserHomePage /> : <WelcomePage />}
       
   </div>
 }
